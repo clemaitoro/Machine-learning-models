@@ -21,6 +21,9 @@ regressor.fit(x, y)
 # ----------------------------- Predicting results ------------------
 y_pred = regressor.predict([[6.5]])
 
+from sklearn.metrics import r2_score
+print(r2_score(y_test, y_pred))
+
 
 # ------------------------ Visualising results ----------------------
 x_grid = np.arange(min(x), max(x), 0.1)
