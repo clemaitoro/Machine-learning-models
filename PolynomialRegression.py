@@ -57,3 +57,7 @@ plt.show()
 print(lin_reg.predict([[6.5]])) # Linear
 
 print(lin_reg_2.predict(poly_reg.fit_transform([[6.5]]))) #Poly
+
+from sklearn.metrics import r2_score
+print(r2_score(y_test, y_pred))
+
