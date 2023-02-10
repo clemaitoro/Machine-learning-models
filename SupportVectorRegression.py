@@ -33,6 +33,9 @@ regressor.fit(x, y)
 
 # print(sc2.inverse_transform(regressor.predict(sc.transform([[6.5]])).reshape(-1,1)))
 
+from sklearn.metrics import r2_score
+print(r2_score(y_test, y_pred))
+
 
 # -------------------------------- Visualising results ----------------------------------------
 
