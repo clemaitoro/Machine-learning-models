@@ -12,19 +12,19 @@ x = dataset.iloc[:, [3, 4]].values
 
 
 # -------------------- Using elbow method + visualisation ------------------------------
-# wcss = []
-#
-# for i in range(1, 11):
-#     kmeans = KMeans(n_clusters=i, random_state=42, init="k-means++")
-#     kmeans.fit(x)
-#     wcss.append(kmeans.inertia_)
+wcss = []
+
+for i in range(1, 11):
+    kmeans = KMeans(n_clusters=i, random_state=42, init="k-means++")
+    kmeans.fit(x)
+    wcss.append(kmeans.inertia_)
 
 
-# plt.plot(range(1, 11), wcss)
-# plt.title("The Elbow Method")
-# plt.xlabel("Number of clusters")
-# plt.ylabel("WCSS")
-# plt.show()
+plt.plot(range(1, 11), wcss)
+plt.title("The Elbow Method")
+plt.xlabel("Number of clusters")
+plt.ylabel("WCSS")
+plt.show()
 
 
 # ------------------ Training the model -----------------------------
