@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 
 
 # --------------------- Importing the data -----------------------------
-
 dataset = pd.read_csv("Market_Basket_Optimisation.csv", header=None)
 
 transactions = []
